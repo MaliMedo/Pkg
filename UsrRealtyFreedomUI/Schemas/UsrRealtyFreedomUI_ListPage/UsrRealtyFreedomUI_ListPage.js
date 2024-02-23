@@ -22,10 +22,6 @@ define("UsrRealtyFreedomUI_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 				"operation": "merge",
 				"name": "DataTable",
 				"values": {
-					"layoutConfig": {
-						"basis": "100%",
-						"width": 300
-					},
 					"columns": [
 						{
 							"id": "f252f581-0ccf-44ac-b7c9-c00df2ad9919",
@@ -34,18 +30,47 @@ define("UsrRealtyFreedomUI_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 							"dataValueType": 1
 						},
 						{
-							"id": "c8689d78-80ba-4e71-8cf2-fa478e3be5bc",
-							"code": "PDS_CreatedOn",
-							"caption": "#ResourceString(PDS_CreatedOn)#",
-							"dataValueType": 7
+							"id": "e3198a0d-a192-5e10-18da-380b5682e788",
+							"code": "PDS_UsrPrice",
+							"path": "UsrPrice",
+							"caption": "#ResourceString(PDS_UsrPrice)#",
+							"dataValueType": 32
 						},
 						{
-							"id": "fd4b3485-a46e-4219-b775-adef1210fe51",
-							"code": "PDS_CreatedBy",
-							"caption": "#ResourceString(PDS_CreatedBy)#",
-							"dataValueType": 10
+							"id": "3b6b0e97-2e90-41b3-1c66-f7f03e810f35",
+							"code": "PDS_UsrAreaSqFt",
+							"path": "UsrAreaSqFt",
+							"caption": "#ResourceString(PDS_UsrAreaSqFt)#",
+							"dataValueType": 32
 						},
+						{
+							"id": "c5777f94-d2a4-5136-a576-f23d5f114ce6",
+							"code": "PDS_UsrType",
+							"path": "UsrType",
+							"caption": "#ResourceString(PDS_UsrType)#",
+							"dataValueType": 10,
+							"referenceSchemaName": "UsrRealtyTypeFreedomUI"
+						},
+						{
+							"id": "ff26b686-e6d0-4030-6f4b-750c4dffc5df",
+							"code": "PDS_UsrOfferType",
+							"path": "UsrOfferType",
+							"caption": "#ResourceString(PDS_UsrOfferType)#",
+							"dataValueType": 10,
+							"referenceSchemaName": "UsrRealtyOfferTypeFreedomUI"
+						},
+						{
+							"id": "cd469a28-064c-b068-b2bb-f60a5cacb4ec",
+							"code": "PDS_CreatedOn",
+							"path": "CreatedOn",
+							"caption": "#ResourceString(PDS_CreatedOn)#",
+							"dataValueType": 7
+						}
 					],
+					"layoutConfig": {
+						"basis": "100%",
+						"width": 300
+					},
 					"primaryColumnName": "PDS_Id",
 					"sorting": "$ItemsSorting | crt.ToDataTableSortingConfig: 'Items'"
 				}
@@ -242,18 +267,130 @@ define("UsrRealtyFreedomUI_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 					"layoutConfig": {
 						"width": 328.125
 					},
-					"classes": ["section-folder-tree"]
+					"classes": [
+						"section-folder-tree"
+					],
+					"_filterOptions": {
+						"expose": [
+							{
+								"attribute": "FolderTree_active_folder_filter",
+								"converters": [
+									{
+										"converter": "crt.FolderTreeActiveFilterAttributeConverter",
+										"args": []
+									}
+								]
+							}
+						],
+						"from": [
+							"FolderTree_items",
+							"FolderTree_favoriteItems",
+							"FolderTree_active_folder_id"
+						]
+					}
 				},
 				"parentName": "SectionContentWrapper",
 				"propertyName": "items",
 				"index": 0
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
-		viewModelConfig: /**SCHEMA_VIEW_MODEL_CONFIG*/{
-			"attributes": {
-				"ItemsSorting": {},
-				"Items": {
-					"isCollection": true,
+		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
+			{
+				"operation": "merge",
+				"path": [
+					"attributes"
+				],
+				"values": {
+					"ItemsSorting": {},
+					"FolderTree_visible": {
+						"value": false
+					},
+					"FolderTree_items": {
+						"isCollection": true,
+						"viewModelConfig": {
+							"attributes": {
+								"Id": {
+									"modelConfig": {
+										"path": "FolderTree_items_DS.Id"
+									}
+								},
+								"Name": {
+									"modelConfig": {
+										"path": "FolderTree_items_DS.Name"
+									}
+								},
+								"ParentId": {
+									"modelConfig": {
+										"path": "FolderTree_items_DS.Parent.Id"
+									}
+								},
+								"FilterData": {
+									"modelConfig": {
+										"path": "FolderTree_items_DS.FilterData"
+									}
+								}
+							}
+						},
+						"modelConfig": {
+							"path": "FolderTree_items_DS",
+							"filterAttributes": [
+								{
+									"name": "FolderTree_items_DS_filter",
+									"loadOnChange": true
+								}
+							]
+						},
+						"embeddedModel": {
+							"config": {
+								"type": "crt.EntityDataSource",
+								"config": {
+									"entitySchemaName": "FolderTree"
+								}
+							},
+							"name": "FolderTree_items_DS"
+						}
+					},
+					"FolderTree_active_folder_id": {},
+					"FolderTree_active_folder_name": {},
+					"FolderTree_active_folder_filter": {
+						"value": {}
+					},
+					"FolderTree_items_DS_filter": {
+						"value": {
+							"isEnabled": true,
+							"trimDateTimeParameterToDate": false,
+							"filterType": 6,
+							"logicalOperation": 0,
+							"items": {
+								"3714ebf4-41a3-9a82-8e8b-039d9ac03ce1": {
+									"isEnabled": true,
+									"trimDateTimeParameterToDate": false,
+									"filterType": 1,
+									"comparisonType": 3,
+									"leftExpression": {
+										"expressionType": 0,
+										"columnPath": "EntitySchemaName"
+									},
+									"rightExpression": {
+										"expressionType": 2,
+										"parameter": {
+											"dataValueType": 1,
+											"value": "UsrRealtyFreedomUI"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				"operation": "merge",
+				"path": [
+					"attributes",
+					"Items"
+				],
+				"values": {
 					"modelConfig": {
 						"path": "PDS",
 						"pagingConfig": {
@@ -276,126 +413,94 @@ define("UsrRealtyFreedomUI_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 								"loadOnChange": true
 							}
 						]
+					}
+				}
+			},
+			{
+				"operation": "merge",
+				"path": [
+					"attributes",
+					"Items",
+					"viewModelConfig",
+					"attributes"
+				],
+				"values": {
+					"PDS_UsrName": {
+						"modelConfig": {
+							"path": "PDS.UsrName"
+						}
 					},
-					"viewModelConfig": {
-						"attributes": {
-							"PDS_Id": {
-								"modelConfig": {
-									"path": 'PDS.Id',
-								}
-							},
-							"PDS_UsrName": {
-								"modelConfig": {
-									"path": "PDS.UsrName"
-								}
-							},
-							"PDS_CreatedOn": {
-								"modelConfig": {
-									"path": "PDS.CreatedOn"
-								}
-							},
-							"PDS_CreatedBy": {
-								"modelConfig": {
-									"path": "PDS.CreatedBy"
-								}
-							}
+					"PDS_UsrPrice": {
+						"modelConfig": {
+							"path": "PDS.UsrPrice"
+						}
+					},
+					"PDS_UsrAreaSqFt": {
+						"modelConfig": {
+							"path": "PDS.UsrAreaSqFt"
+						}
+					},
+					"PDS_UsrType": {
+						"modelConfig": {
+							"path": "PDS.UsrType"
+						}
+					},
+					"PDS_UsrOfferType": {
+						"modelConfig": {
+							"path": "PDS.UsrOfferType"
+						}
+					},
+					"PDS_CreatedOn": {
+						"modelConfig": {
+							"path": "PDS.CreatedOn"
+						}
+					},
+					"PDS_Id": {
+						"modelConfig": {
+							"path": "PDS.Id"
 						}
 					}
-				},
-				"FolderTree_visible": {
-					"value": false
-				},
-				"FolderTree_items": {
-					"isCollection": true,
-					"viewModelConfig": {
-						"attributes": {
-							"Id": {
-								"modelConfig": {
-									"path": "FolderTree_items_DS.Id"
-								}
-							},
-							"Name": {
-								"modelConfig": {
-									"path": "FolderTree_items_DS.Name"
-								}
-							},
-							"ParentId": {
-								"modelConfig": {
-									"path": "FolderTree_items_DS.Parent.Id"
-								}
-							},
-							"FilterData": {
-								"modelConfig": {
-									"path": "FolderTree_items_DS.FilterData"
-								}
-							}
-						}
-					},
-					"modelConfig": {
-						"path": "FolderTree_items_DS",
-						"filterAttributes": [
-							{
-								"name": "FolderTree_items_DS_filter",
-								"loadOnChange": true
-							}
-						]
-					},
-					"embeddedModel": {
-						"name": "FolderTree_items_DS",
-						"config": {
+				}
+			}
+		]/**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/,
+		modelConfigDiff: /**SCHEMA_MODEL_CONFIG_DIFF*/[
+			{
+				"operation": "merge",
+				"path": [],
+				"values": {
+					"dataSources": {
+						"PDS": {
 							"type": "crt.EntityDataSource",
+							"hiddenInPageDesigner": true,
 							"config": {
-								"entitySchemaName": "FolderTree"
-							}
-						}
-					}
-				},
-				"FolderTree_active_folder_id": {},
-				"FolderTree_active_folder_name": {},
-				"FolderTree_active_folder_filter": {
-					"value": {}
-				},
-				"FolderTree_items_DS_filter": {
-					"value": {
-						"isEnabled": true,
-						"trimDateTimeParameterToDate": false,
-						"filterType": 6,
-						"logicalOperation": 0,
-						"items": {
-							"3714ebf4-41a3-9a82-8e8b-039d9ac03ce1": {
-								"isEnabled": true,
-								"trimDateTimeParameterToDate": false,
-								"filterType": 1,
-								"comparisonType": 3,
-								"leftExpression": {
-									"expressionType": 0,
-									"columnPath": "EntitySchemaName"
-								},
-								"rightExpression": {
-									"expressionType": 2,
-									"parameter": {
-										"dataValueType": 1,
-										"value": "UsrRealtyFreedomUI"
+								"entitySchemaName": "UsrRealtyFreedomUI",
+								"attributes": {
+									"UsrName": {
+										"path": "UsrName"
+									},
+									"UsrPrice": {
+										"path": "UsrPrice"
+									},
+									"UsrAreaSqFt": {
+										"path": "UsrAreaSqFt"
+									},
+									"UsrType": {
+										"path": "UsrType"
+									},
+									"UsrOfferType": {
+										"path": "UsrOfferType"
+									},
+									"CreatedOn": {
+										"path": "CreatedOn"
 									}
 								}
-							}
+							},
+							"scope": "viewElement"
 						}
 					}
 				}
 			}
-		}/**SCHEMA_VIEW_MODEL_CONFIG*/,
-		modelConfig: /**SCHEMA_MODEL_CONFIG*/{
-			"dataSources": {
-				"PDS": {
-					"type": "crt.EntityDataSource",
-					"hiddenInPageDesigner": true,
-					"config": {
-						"entitySchemaName": "UsrRealtyFreedomUI"
-					},
-					"scope": "viewElement"
-				}
-			}
-		}/**SCHEMA_MODEL_CONFIG*/,
+		]/**SCHEMA_MODEL_CONFIG_DIFF*/,
 		handlers: /**SCHEMA_HANDLERS*/[]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
 		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/
