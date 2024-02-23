@@ -1,0 +1,159 @@
+= MetaData.Schema.UId "93f8177a-553d-43ca-b232-811806ee23c5"
+= MetaData.Schema.A2 "UsrRealtyFreedomUI"
+= MetaData.Schema.A5 "6f71e54c-1960-40c9-94f6-073fd67699ab"
+= MetaData.Schema.B6 "39eefd8b-9f36-4e0d-9e67-1e8a1775d089"
+= MetaData.Schema.EG1.UId "35ed072d-b64b-48d9-a321-be185b27409b"
+= MetaData.Schema.EG1.A2 "UsrRealtyFreedomUIEventsProcess"
+= MetaData.Schema.EG1.A5 "6f71e54c-1960-40c9-94f6-073fd67699ab"
+= MetaData.Schema.EG1.B1 []
+= MetaData.Schema.EG1.B3 []
++ MetaData.Schema.EG1.B8 "0.0.0.0"
+= MetaData.Schema.EG1.FJ1 []
+= MetaData.Schema.EG1.BK37.A3 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
+= MetaData.Schema.EG1.BK37.A4 "bb4d6607-026b-4b27-b640-8f5c77c1e89d"
+= MetaData.Schema.EG1.BK3 []
+= MetaData.Schema.EG1.BK4 []
+= MetaData.Schema.D8 "1bab9dcf-17d5-49f8-9536-8e0064f1dce0"
++ MetaData.Schema.D29 "null"
++ MetaData.Schema.D30 "null"
++ MetaData.Schema.D31 "null"
++ MetaData.Schema.D4 "edbd332c-030d-4592-b048-5a351b0fc7fd"
++ MetaData.Schema.D2 {
+  "UId": "edbd332c-030d-4592-b048-5a351b0fc7fd",
+  "A2": "UsrName",
+  "A3": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A4": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A5": "6f71e54c-1960-40c9-94f6-073fd67699ab",
+  "S2": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd",
+  "E2": 1
+}
++ MetaData.Schema.D2 {
+  "UId": "139a733b-df33-2797-ae3c-541ef8658470",
+  "A2": "UsrNumber",
+  "A3": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A4": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A5": "4f4f52cd-c1fb-429e-a671-eb1bfa346bef",
+  "S2": "325a73b8-0f47-44a0-8412-7606f78003ac",
+  "E5": false,
+  "E12": {
+    "FB1": 4,
+    "FB4": "R-",
+    "FB5": 3
+  }
+}
++ MetaData.Schema.D2 {
+  "UId": "3278f2d0-18d3-79a5-f687-7b59fd6cb85b",
+  "A2": "UsrManager",
+  "A3": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A4": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A5": "4f4f52cd-c1fb-429e-a671-eb1bfa346bef",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "16be3651-8fe2-4159-8dd0-a803d4683dd3",
+  "E6": true,
+  "E12": {
+    "FB1": 3,
+    "FB2": "4f367ca9-549b-4a1a-b64e-a40123f52ac0"
+  },
+  "E17": "UsrManagerId",
+  "E18": "UsrManagerName"
+}
++ MetaData.Schema.D2 {
+  "UId": "fd79413a-29d5-78ac-007f-e4110c572a8f",
+  "A2": "UsrComment",
+  "A3": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A4": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A5": "4f4f52cd-c1fb-429e-a671-eb1bfa346bef",
+  "S2": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd",
+  "E25": true
+}
++ MetaData.Schema.D2 {
+  "UId": "7348e13c-c7ca-c611-5100-23455e291706",
+  "A2": "UsrOfferType",
+  "A3": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A4": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A5": "4f4f52cd-c1fb-429e-a671-eb1bfa346bef",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "6c5aa78e-f112-417d-9afd-f99d0895281c",
+  "E6": true,
+  "E20": true,
+  "E12": {
+    "FB1": 1,
+    "FB2": "1cff7f0c-c117-4869-ab58-23bbb9503ecc"
+  },
+  "E17": "UsrOfferTypeId",
+  "E18": "UsrOfferTypeName"
+}
++ MetaData.Schema.D2 {
+  "UId": "57fea15c-ecb1-0ce4-5735-facb3d68b9ad",
+  "A2": "UsrType",
+  "A3": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A4": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A5": "4f4f52cd-c1fb-429e-a671-eb1bfa346bef",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "09e7007f-556b-45b5-a978-3750ef645df5",
+  "E6": true,
+  "E20": true,
+  "E12": {
+    "FB1": 1,
+    "FB2": "d8dd2e04-f788-4895-a625-1472ceb7eeb3"
+  },
+  "E17": "UsrTypeId",
+  "E18": "UsrTypeName"
+}
++ MetaData.Schema.D2 {
+  "UId": "5d6bd9cd-d6ab-3d72-b523-7b6aa0725692",
+  "A2": "UsrCurrency",
+  "A3": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A4": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A5": "4f4f52cd-c1fb-429e-a671-eb1bfa346bef",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "2d36aca6-5b8c-4122-9648-baf3b7f8256d",
+  "E6": true,
+  "E20": true,
+  "E12": {
+    "FB1": 1,
+    "FB2": "c0057119-53e6-df11-971b-001d60e938c6"
+  },
+  "E17": "UsrCurrencyId",
+  "E18": "UsrCurrencyName"
+}
++ MetaData.Schema.D2 {
+  "UId": "b8f5f577-9643-1842-aa0b-86bcdffeacca",
+  "A2": "UsrAreaSqFt",
+  "A3": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A4": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A5": "4f4f52cd-c1fb-429e-a671-eb1bfa346bef",
+  "S2": "5cc8060d-6d10-4773-89fc-8c12d6f659a6"
+}
++ MetaData.Schema.D2 {
+  "UId": "fdd95c7a-254c-d522-3ef5-4561fbb41bb5",
+  "A2": "UsrPrice",
+  "A3": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A4": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A5": "4f4f52cd-c1fb-429e-a671-eb1bfa346bef",
+  "S2": "5cc8060d-6d10-4773-89fc-8c12d6f659a6",
+  "E2": 1
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","edbd332c-030d-4592-b048-5a351b0fc7fd","139a733b-df33-2797-ae3c-541ef8658470","3278f2d0-18d3-79a5-f687-7b59fd6cb85b","fd79413a-29d5-78ac-007f-e4110c572a8f","7348e13c-c7ca-c611-5100-23455e291706","57fea15c-ecb1-0ce4-5735-facb3d68b9ad","5d6bd9cd-d6ab-3d72-b523-7b6aa0725692","b8f5f577-9643-1842-aa0b-86bcdffeacca","fdd95c7a-254c-d522-3ef5-4561fbb41bb5"]
+= MetaData.Schema.D20.A2 "UsrRealtyFreedomUIEvents"
+= MetaData.Schema.D36.A3 "93f8177a-553d-43ca-b232-811806ee23c5"
+= MetaData.Schema.D36.BS1 false
+- MetaData.Schema.EG1.B6
+- MetaData.Schema.EG1.BK29
+- MetaData.Schema.EG1.BK30
+- MetaData.Schema.D1
+- MetaData.Schema.D20.A5
+- MetaData.Schema.D20.FA4
+- MetaData.Schema.D20.FA5
+- MetaData.Schema.D20.FA6
+- MetaData.Schema.D20.FA7
+- MetaData.Schema.D20.FA11
+- MetaData.Schema.D20.FA12
+- MetaData.Schema.D20.FA15
++ MetaData.Schema.B7 false
++ MetaData.Schema.D2.["ae0e45ca-c495-4fe7-a39d-3ab7278e1617"].E16 false
++ MetaData.Schema.D2.["e80190a5-03b2-4095-90f7-a193a960adee"].E16 false
++ MetaData.Schema.D2.["ebf6bb93-8aa6-4a01-900d-c6ea67affe21"].E16 false
++ MetaData.Schema.D2.["9928edec-4272-425a-93bb-48743fee4b04"].E16 false
++ MetaData.Schema.D2.["3015559e-cbc6-406a-88af-07f7930be832"].E16 false
++ MetaData.Schema.D2.["3fabd836-6a53-4d8d-9069-6df88d9dae1e"].E16 false
