@@ -400,11 +400,29 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 					"PDS_UsrPrice_010p13r": {
 						"modelConfig": {
 							"path": "PDS.UsrPrice"
+						},
+						"validators": {
+							"MySuperValidator": {
+								"type": "usr.DGValidator",
+								"params": {
+									"minValue": 50,
+									"message": "#ResourceString(PriceCannotBeLess1)#"
+								}
+							}
 						}
 					},
 					"PDS_UsrAreaSqFt_dnl7s58": {
 						"modelConfig": {
 							"path": "PDS.UsrAreaSqFt"
+						},
+						"validators": {
+							"MySuperValidator": {
+								"type": "usr.DGValidator",
+								"params": {
+									"minValue": 100,
+									"message": "#ResourceString(AreaCannotBeLess)#"
+								}
+							}
 						}
 					},
 					"PDS_UsrCurrency_cxx124f": {
@@ -502,11 +520,20 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 				/* Implementation of the custom query handler. */
 				handler: async (request, next) => {
 					this.console.log("Button works...");
-					Terrasoft.showInformation("My button was pressed.");
+					//Terrasoft.showInformation("My button was pressed.");
 					var price = await request.$context.PDS_UsrPrice_010p13r;
 					this.console.log("Price = " + price);
 					request.$context.PDS_UsrPrice_010p13r = price * 0.2;
 					/* Call the next handler if it exists and return its result. */
+					//lookup value operation
+					//debugger;
+					var realtyTypeObject = await request.$context.PDS_UsrType_jwghe6r;
+					if (realtyTypeObject){
+						var typeName = realtyTypeObject.displayValue;
+						var typeId = realtyTypeObject.value;
+						this.console.log("type id = " + typeId + "type Name = " + typeName);
+					}
+					
 					return next?.handle(request);
 				}
 			},
@@ -527,6 +554,38 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 			}
 		]/**SCHEMA_HANDLERS*/,
 		converters: /**SCHEMA_CONVERTERS*/{}/**SCHEMA_CONVERTERS*/,
-		validators: /**SCHEMA_VALIDATORS*/{}/**SCHEMA_VALIDATORS*/
+		validators: /**SCHEMA_VALIDATORS*/{
+			/* The validator type must contain a vendor prefix.
+			Format the validator type in PascalCase. */
+			"usr.DGValidator": {
+				validator: function (config) {
+					return function (control) {
+						let value = control.value;
+						let minValue = config.minValue;
+						let valueIsCorrect = value >= minValue;
+						var result;
+						if (valueIsCorrect) {
+							result = null;
+						} else {
+							result = {
+								"usr.DGValidator": { 
+									message: config.message
+								}
+							};
+						}
+						return result;
+					};
+				},
+				params: [
+					{
+						name: "minValue"
+					},
+					{
+						name: "message"
+					}
+				],
+				async: false
+			}
+		}/**SCHEMA_VALIDATORS*/
 	};
 });
