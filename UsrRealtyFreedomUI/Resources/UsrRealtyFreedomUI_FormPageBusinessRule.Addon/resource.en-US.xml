@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="AddonConfig.Rules.dd3050e5-5b41-f665-3a90-45a018028f99.Caption" Value="Is filled" />
+			<Item Name="Caption" Value="Realty FreedomUI form page (Business rules)" />
+		</Items>
+	</Group>
+</Resources>
