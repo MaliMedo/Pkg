@@ -8,6 +8,7 @@
 			<Item Name="LocalizableStrings.addRecord_kl96us9_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.addRecord_u6nahmw_caption.Value" Value="Add new" />
 			<Item Name="LocalizableStrings.AreaCannotBeLess.Value" Value="Area cannot be less then 100" />
+			<Item Name="LocalizableStrings.Button_ulicrok_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.Button_xssssi6_caption.Value" Value="PUSH ME!" />
 			<Item Name="LocalizableStrings.ExpansionPanel_dtcrqa0_title.Value" Value="Visits" />
 			<Item Name="LocalizableStrings.GridDetailAddBtn_f17vwl4_caption.Value" Value="New" />
@@ -16,6 +17,7 @@
 			<Item Name="LocalizableStrings.GridDetailRefreshBtn_30ftgm7_caption.Value" Value="Refresh" />
 			<Item Name="LocalizableStrings.GridDetailSearchFilter_kbfgu8l_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_mmk7j2m_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.MenuItem_cczcy1d_caption.Value" Value="Calculate Avg Price" />
 			<Item Name="LocalizableStrings.NumberInput_iw6v19p_label.Value" Value="Number" />
 			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price cannot be less then 50" />
 			<Item Name="LocalizableStrings.PriceCannotBeLess1.Value" Value="Cannot be less then 50" />
