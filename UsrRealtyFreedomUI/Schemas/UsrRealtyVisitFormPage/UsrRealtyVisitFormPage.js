@@ -62,11 +62,30 @@ define("UsrRealtyVisitFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 			},
 			{
 				"operation": "insert",
-				"name": "Input_t1ed5r9",
+				"name": "UsrMinutes",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
 						"row": 3,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.UsrRealtyVisitFreedomUIDS_UsrMinutes_p0fg7g7",
+					"labelPosition": "above",
+					"control": "$UsrRealtyVisitFreedomUIDS_UsrMinutes_p0fg7g7"
+				},
+				"parentName": "MainContainer",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "Input_t1ed5r9",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 4,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -78,7 +97,7 @@ define("UsrRealtyVisitFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 				},
 				"parentName": "MainContainer",
 				"propertyName": "items",
-				"index": 2
+				"index": 3
 			},
 			{
 				"operation": "insert",
@@ -86,7 +105,7 @@ define("UsrRealtyVisitFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 				"values": {
 					"layoutConfig": {
 						"column": 1,
-						"row": 4,
+						"row": 5,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -100,7 +119,7 @@ define("UsrRealtyVisitFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 				},
 				"parentName": "MainContainer",
 				"propertyName": "items",
-				"index": 3
+				"index": 4
 			},
 			{
 				"operation": "insert",
@@ -145,6 +164,11 @@ define("UsrRealtyVisitFormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**
 					"UsrRealtyVisitFreedomUIDS_UsrManager_dh7ysbd": {
 						"modelConfig": {
 							"path": "UsrRealtyVisitFreedomUIDS.UsrManager"
+						}
+					},
+					"UsrRealtyVisitFreedomUIDS_UsrMinutes_p0fg7g7": {
+						"modelConfig": {
+							"path": "UsrRealtyVisitFreedomUIDS.UsrMinutes"
 						}
 					}
 				}

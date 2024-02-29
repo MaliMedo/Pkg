@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "27311406-c671-4825-b9db-2a6c0e0be5f7",
+    "Name": "UsrCalculateRemMin",
+    "ModifiedOnUtc": "\/Date(1709203216000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Calculate Rem Minutes",
+    "DependsOn": []
+  }
+}

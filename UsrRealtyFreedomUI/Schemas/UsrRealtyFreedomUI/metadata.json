@@ -17,6 +17,7 @@
 + MetaData.Schema.D29 "null"
 + MetaData.Schema.D30 "null"
 + MetaData.Schema.D31 "null"
++ MetaData.Schema.D38 true
 + MetaData.Schema.D4 "edbd332c-030d-4592-b048-5a351b0fc7fd"
 + MetaData.Schema.D2 {
   "UId": "edbd332c-030d-4592-b048-5a351b0fc7fd",
@@ -142,7 +143,27 @@
   "A5": "4f4f52cd-c1fb-429e-a671-eb1bfa346bef",
   "S2": "5cc8060d-6d10-4773-89fc-8c12d6f659a6"
 }
-~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","edbd332c-030d-4592-b048-5a351b0fc7fd","139a733b-df33-2797-ae3c-541ef8658470","3278f2d0-18d3-79a5-f687-7b59fd6cb85b","fd79413a-29d5-78ac-007f-e4110c572a8f","7348e13c-c7ca-c611-5100-23455e291706","57fea15c-ecb1-0ce4-5735-facb3d68b9ad","5d6bd9cd-d6ab-3d72-b523-7b6aa0725692","b8f5f577-9643-1842-aa0b-86bcdffeacca","fdd95c7a-254c-d522-3ef5-4561fbb41bb5","16c5a2bc-8d50-479d-ca1d-01d860a97a35"]
++ MetaData.Schema.D2 {
+  "UId": "5d76b5b7-9c57-d967-393f-c542e7a06e0a",
+  "A2": "UsrRemainingMinutes",
+  "A3": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A4": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A5": "4f4f52cd-c1fb-429e-a671-eb1bfa346bef",
+  "S2": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0"
+}
++ MetaData.Schema.D2 {
+  "UId": "201cdd3d-ccce-5c67-4fb1-73f0fc859eb4",
+  "A2": "UsrTotalResMinutes",
+  "A3": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A4": "93f8177a-553d-43ca-b232-811806ee23c5",
+  "A5": "4f4f52cd-c1fb-429e-a671-eb1bfa346bef",
+  "S2": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+  "E12": {
+    "FB1": 1,
+    "FB2": "300"
+  }
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","edbd332c-030d-4592-b048-5a351b0fc7fd","139a733b-df33-2797-ae3c-541ef8658470","3278f2d0-18d3-79a5-f687-7b59fd6cb85b","fd79413a-29d5-78ac-007f-e4110c572a8f","7348e13c-c7ca-c611-5100-23455e291706","57fea15c-ecb1-0ce4-5735-facb3d68b9ad","5d6bd9cd-d6ab-3d72-b523-7b6aa0725692","b8f5f577-9643-1842-aa0b-86bcdffeacca","fdd95c7a-254c-d522-3ef5-4561fbb41bb5","16c5a2bc-8d50-479d-ca1d-01d860a97a35","5d76b5b7-9c57-d967-393f-c542e7a06e0a","201cdd3d-ccce-5c67-4fb1-73f0fc859eb4"]
 = MetaData.Schema.D20.A2 "UsrRealtyFreedomUIEvents"
 = MetaData.Schema.D36.A3 "93f8177a-553d-43ca-b232-811806ee23c5"
 = MetaData.Schema.D36.BS1 false

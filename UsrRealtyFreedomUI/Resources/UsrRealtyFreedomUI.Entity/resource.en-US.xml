@@ -12,6 +12,8 @@
 			<Item Name="Columns.UsrNumber.Caption" Value="Number" />
 			<Item Name="Columns.UsrOfferType.Caption" Value="Offer Type" />
 			<Item Name="Columns.UsrPrice.Caption" Value="Price" />
+			<Item Name="Columns.UsrRemainingMinutes.Caption" Value="Remaining Minutes" />
+			<Item Name="Columns.UsrTotalResMinutes.Caption" Value="Total Reserved Minutes" />
 			<Item Name="Columns.UsrType.Caption" Value="Type" />
 		</Items>
 	</Group>

@@ -241,6 +241,48 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 			},
 			{
 				"operation": "insert",
+				"name": "UsrTotalResMinutes",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 6,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.PDS_UsrTotalResMinutes_ogr74hq",
+					"labelPosition": "auto",
+					"control": "$PDS_UsrTotalResMinutes_ogr74hq"
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 5
+			},
+			{
+				"operation": "insert",
+				"name": "UsrRemainingMinutes",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 7,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"type": "crt.NumberInput",
+					"label": "$Resources.Strings.PDS_UsrRemainingMinutes_u2jou5r",
+					"labelPosition": "auto",
+					"control": "$PDS_UsrRemainingMinutes_u2jou5r",
+					"visible": true,
+					"readonly": true,
+					"placeholder": "",
+					"tooltip": ""
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 6
+			},
+			{
+				"operation": "insert",
 				"name": "UsrType",
 				"values": {
 					"layoutConfig": {
@@ -696,6 +738,13 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 							"caption": "#ResourceString(GridDetail_2mhbaxhDS_UsrManager)#",
 							"dataValueType": 10,
 							"referenceSchemaName": "Contact"
+						},
+						{
+							"id": "43654aef-f24d-8809-fd6d-e67285d9c0b1",
+							"code": "GridDetail_2mhbaxhDS_UsrMinutes",
+							"path": "UsrMinutes",
+							"caption": "#ResourceString(GridDetail_2mhbaxhDS_UsrMinutes)#",
+							"dataValueType": 4
 						}
 					]
 				},
@@ -824,12 +873,37 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 										"path": "GridDetail_2mhbaxhDS.UsrManager"
 									}
 								},
+								"GridDetail_2mhbaxhDS_UsrMinutes": {
+									"modelConfig": {
+										"path": "GridDetail_2mhbaxhDS.UsrMinutes"
+									}
+								},
 								"GridDetail_2mhbaxhDS_Id": {
 									"modelConfig": {
 										"path": "GridDetail_2mhbaxhDS.Id"
 									}
 								}
 							}
+						}
+					},
+					"PDS_UsrTotalMin_mbwwcxk": {
+						"modelConfig": {
+							"path": "PDS.UsrTotalMin"
+						}
+					},
+					"PDS_UsrRemMin_qhgc9rq": {
+						"modelConfig": {
+							"path": "PDS.UsrRemMin"
+						}
+					},
+					"PDS_UsrTotalResMinutes_ogr74hq": {
+						"modelConfig": {
+							"path": "PDS.UsrTotalResMinutes"
+						}
+					},
+					"PDS_UsrRemainingMinutes_u2jou5r": {
+						"modelConfig": {
+							"path": "PDS.UsrRemainingMinutes"
 						}
 					}
 				}
@@ -898,6 +972,9 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functi
 								},
 								"UsrManager": {
 									"path": "UsrManager"
+								},
+								"UsrMinutes": {
+									"path": "UsrMinutes"
 								}
 							}
 						}

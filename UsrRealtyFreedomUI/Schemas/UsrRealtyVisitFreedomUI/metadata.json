@@ -21,6 +21,7 @@
 + MetaData.Schema.D29 "null"
 + MetaData.Schema.D30 "null"
 + MetaData.Schema.D31 "null"
++ MetaData.Schema.D38 true
 + MetaData.Schema.D2 {
   "UId": "461ce6ae-0e65-8a12-c4d3-b6d6f76ca8f9",
   "A2": "UsrManager",
@@ -84,7 +85,19 @@
   "E17": "UsrParentRealtyId",
   "E18": "UsrParentRealtyUsrName"
 }
-~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","461ce6ae-0e65-8a12-c4d3-b6d6f76ca8f9","73e7f2a1-85af-669d-15d8-82238feea59a","c50ae208-09ae-f2b7-3bb1-034876db4ce7","04429871-cd71-8caf-1625-295ddb281ced","8f5f7a03-fb68-4f6c-1db2-87cecf03583e"]
++ MetaData.Schema.D2 {
+  "UId": "0e8a1bde-e906-73e1-3c29-e95bc3211c1a",
+  "A2": "UsrMinutes",
+  "A3": "8c7f9bdd-b374-4d8c-bb57-b3b569356b26",
+  "A4": "8c7f9bdd-b374-4d8c-bb57-b3b569356b26",
+  "A5": "4f4f52cd-c1fb-429e-a671-eb1bfa346bef",
+  "S2": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+  "E12": {
+    "FB1": 1,
+    "FB2": "60"
+  }
+}
+~ MetaData.Schema.D2 ["ae0e45ca-c495-4fe7-a39d-3ab7278e1617","e80190a5-03b2-4095-90f7-a193a960adee","ebf6bb93-8aa6-4a01-900d-c6ea67affe21","9928edec-4272-425a-93bb-48743fee4b04","3015559e-cbc6-406a-88af-07f7930be832","3fabd836-6a53-4d8d-9069-6df88d9dae1e","461ce6ae-0e65-8a12-c4d3-b6d6f76ca8f9","73e7f2a1-85af-669d-15d8-82238feea59a","c50ae208-09ae-f2b7-3bb1-034876db4ce7","04429871-cd71-8caf-1625-295ddb281ced","8f5f7a03-fb68-4f6c-1db2-87cecf03583e","0e8a1bde-e906-73e1-3c29-e95bc3211c1a"]
 = MetaData.Schema.D20.A2 "UsrRealtyVisitFreedomUIEvents"
 = MetaData.Schema.D36.A3 "8c7f9bdd-b374-4d8c-bb57-b3b569356b26"
 = MetaData.Schema.D36.BS1 false
