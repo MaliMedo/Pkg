@@ -14,7 +14,7 @@
 		[OperationContract]
 		[WebInvoke(Method = "POST", BodyStyle = WebMessageBodyStyle.Wrapped,
 			RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
-public decimal GetTotalAmountByTypeId(string realtyTypeId, string realtyOfferTypeId,
+	public decimal GetTotalAmountByTypeId(string realtyTypeId, string realtyOfferTypeId,
 			string entityName)
 		{
 			if (string.IsNullOrEmpty(realtyTypeId) || string.IsNullOrEmpty(realtyOfferTypeId)
@@ -23,7 +23,7 @@ public decimal GetTotalAmountByTypeId(string realtyTypeId, string realtyOfferTyp
 				return -1;
 			}
 			Select select = new Select(UserConnection)
-				.Column(Func.Sum("UsrPrice"))
+				.Column(Func.Min("UsrPrice"))
 				.From(entityName)
 				.Where("UsrTypeId").IsEqual(Column.Parameter(new Guid(realtyTypeId)))
 				.And("UsrOfferTypeId").IsEqual(Column.Parameter(new Guid(realtyOfferTypeId)))

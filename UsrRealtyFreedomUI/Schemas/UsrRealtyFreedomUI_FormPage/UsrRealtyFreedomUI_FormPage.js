@@ -789,8 +789,8 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]
 							"MySuperValidator": {
 								"type": "usr.DGValidator",
 								"params": {
-									"minValue": 50,
-									"message": "#ResourceString(PriceCannotBeLess1)#"
+									"minValue": 1,
+									"message": "#ResourceString(MustBeGreaterThenZero)#"
 								}
 							}
 						}
@@ -803,8 +803,8 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]
 							"MySuperValidator": {
 								"type": "usr.DGValidator",
 								"params": {
-									"minValue": 100,
-									"message": "#ResourceString(AreaCannotBeLess)#"
+									"minValue": 1,
+									"message": "#ResourceString(MustBeGreaterThenZero)#"
 								}
 							}
 						}
@@ -827,6 +827,11 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]
 					"PDS_UsrComment_tau5hz7": {
 						"modelConfig": {
 							"path": "PDS.UsrComment"
+						},
+						"validators": {
+							"required": {
+								"type": "crt.Required"
+							}
 						}
 					},
 					"PDS_UsrManager_pehf433": {
@@ -1031,6 +1036,17 @@ define("UsrRealtyFreedomUI_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]
 						var percent = await request.$context.PDS_UsrOfferTypeUsrCommissionPercent;
 						var commission = price * percent / 100;
 						request.$context.PDS_UsrCommision_f5w8tg4 = commission;
+					}
+					if (request.attributeName === 'PDS_UsrPrice_010p13r'){
+						var priceReq = await request.$context.PDS_UsrPrice_010p13r;
+						if(priceReq >= 10000){
+							/* If the request is new, apply the required validator to the UsrDescription attribute. */
+							request.$context.enableAttributeValidator('PDS_UsrComment_tau5hz7', 'required');
+						}
+						else {
+							/* Do not apply the required validator to the UsrDescription attribute for non-new requests. */
+							request.$context.disableAttributeValidator('PDS_UsrComment_tau5hz7', 'required');
+						}
 					}
 					/* Call the next handler if it exists and return its result. */
 					return next?.handle(request);

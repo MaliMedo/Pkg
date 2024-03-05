@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "b30241c2-0822-4bbc-b9ef-188f4af1fb0f",
+    "Name": "UsrGoldPrice1",
+    "ModifiedOnUtc": "\/Date(1709553166000)\/",
+    "ManagerName": "ServiceSchemaManager",
+    "Caption": "/api/Rate/Gold",
+    "DependsOn": []
+  }
+}

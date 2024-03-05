@@ -19,6 +19,7 @@
 			<Item Name="LocalizableStrings.GridDetailSettingsBtn_mmk7j2m_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.MenuItem_cczcy1d_caption.Value" Value="Calculate Avg Price" />
 			<Item Name="LocalizableStrings.MenuItem_dwra6al_caption.Value" Value="Run web service" />
+			<Item Name="LocalizableStrings.MustBeGreaterThenZero.Value" Value="Value must be greater than 0." />
 			<Item Name="LocalizableStrings.NumberInput_iw6v19p_label.Value" Value="Number" />
 			<Item Name="LocalizableStrings.PriceCannotBeLess.Value" Value="Price cannot be less then 50" />
 			<Item Name="LocalizableStrings.PriceCannotBeLess1.Value" Value="Cannot be less then 50" />
